@@ -69,6 +69,14 @@ A API inicia em `http://localhost:3000` por padrão.
 - `PUT /veiculo/:id`
 - `DELETE /veiculo/:id`
 
+### Usuário
+
+- `GET /usuario`
+- `GET /usuario/:id`
+- `POST /usuario/register`
+- `POST /usuario/login`
+- `DELETE /usuario/:id`
+
 ## Estrutura
 
 - `src/index.js`: entrada da API.

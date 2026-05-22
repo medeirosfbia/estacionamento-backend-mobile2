@@ -1,7 +1,7 @@
 const db = require('./db');
 
-const Proprietario = db.sequelize.define('proprietario', {
-    id_proprietario: {
+const Usuario = db.sequelize.define('usuario', {
+    id_usuario: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
         allowNull: false,
@@ -10,12 +10,15 @@ const Proprietario = db.sequelize.define('proprietario', {
     nome: {
         type: db.Sequelize.STRING(255)
     },
-    cpf: {
-        type: db.Sequelize.STRING(14)
+    email: {
+        type: db.Sequelize.STRING(255)
+    },
+    senha: {
+        type: db.Sequelize.STRING(255)
     }
 }, {
     freezeTableName: true,
     timestamps: false
 });
 
-module.exports = Proprietario;
+module.exports = Usuario;

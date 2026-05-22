@@ -8,7 +8,7 @@ const Veiculo = db.sequelize.define('veiculo', {
         primaryKey: true
     },
     placa: {
-        type: db.Sequelize.TEXT
+        type: db.Sequelize.STRING(10)
     },
     ano: {
         type: db.Sequelize.INTEGER
@@ -18,12 +18,16 @@ const Veiculo = db.sequelize.define('veiculo', {
     },
     fk_proprietario: {
         type: db.Sequelize.INTEGER,
-        references: { model: 'proprietario', key: 'id_proprietario' },
+        references: {
+            model: 'proprietario',
+            key: 'id_proprietario'
+        },
         onDelete: 'CASCADE',
-        allowNull: false,
+        allowNull: false
     }
-}, { freezeTableName: true });
-
-//Veiculo.sync({force: true});
+}, {
+    freezeTableName: true,
+    timestamps: false
+});
 
 module.exports = Veiculo;
