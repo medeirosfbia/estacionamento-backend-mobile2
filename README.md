@@ -21,8 +21,8 @@ PORT=3000
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=estacionamento
-DB_USER=dev
-DB_PASSWORD=dev123
+DB_USER=root
+DB_PASSWORD=root
 ```
 
 ## Subir o banco
