@@ -15,7 +15,10 @@ const veiculo = require('../controllers/VeiculoControlls.js');
 const usuario = require('../controllers/UsuarioControlls.js');
 
 //Rotas
+// parse application/json
 app.use(bodyParser.json());
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
 
 //Função CORS para a autorização do uso da API
 app.use(cors())
