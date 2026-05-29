@@ -18,4 +18,6 @@ const Proprietario = db.sequelize.define('proprietario', {
     timestamps: false
 });
 
+//Proprietario.sync({ force: true });
+
 module.exports = Proprietario;

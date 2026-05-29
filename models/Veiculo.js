@@ -30,4 +30,6 @@ const Veiculo = db.sequelize.define('veiculo', {
     timestamps: false
 });
 
+//Veiculo.sync({ force: true });
+
 module.exports = Veiculo;
